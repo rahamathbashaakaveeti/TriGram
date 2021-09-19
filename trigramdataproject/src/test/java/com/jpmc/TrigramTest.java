@@ -1,7 +1,9 @@
-package com.jpmc.trigramdataproject;
+package com.jpmc;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
+
+import com.jpmc.Trigram;
 
 class TrigramTest {
 

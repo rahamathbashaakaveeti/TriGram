@@ -1,4 +1,4 @@
-package com.jpmc.trigramdataproject;
+package com.jpmc;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Test;
+
+import com.jpmc.ProcessText;
+import com.jpmc.Trigram;
 
 public class ProcessTextTest {
 

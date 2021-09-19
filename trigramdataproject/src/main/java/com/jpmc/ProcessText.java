@@ -1,4 +1,4 @@
-package com.jpmc.trigramdataproject;
+package com.jpmc;
 
 import java.util.ArrayList;
 import java.util.HashMap;
