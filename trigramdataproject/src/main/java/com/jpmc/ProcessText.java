@@ -6,25 +6,27 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ProcessText {
     
     private Map<String,Trigram> trigrams;
     private Random random;
     private String text;
-
+    private static final Logger logger = LogManager.getLogger(ProcessText.class);
+    
     public ProcessText(String text) {        
         this.trigrams = generateTrigrams(text);
         this.random = new Random();
         this.text = text; 
     }
-
+    
     public String generateText() {
         StringBuilder generatedText = new StringBuilder();
         
         String key = getStartKey();
-        
+        logger.info("Generating Text from Trigrams STARTED");
         while(this.trigrams.containsKey(key)) {
             Trigram trigram = this.trigrams.get(key);
             String newVal = trigram.getValue();
@@ -33,7 +35,7 @@ public class ProcessText {
             
             key = trigram.nextKey(newVal);
         }
-        
+        logger.info("Generating Text from Trigrams COMPLETED ");
         return generatedText.toString();
     }
     
@@ -57,6 +59,8 @@ public class ProcessText {
     private Map<String, Trigram> generateTrigrams(String text) {
         Map<String,Trigram> trigrams = new HashMap<String,Trigram>();
         
+        logger.info("Generating Trigrams STARTED ");
+        
         String[] words = text.split(" ");        
         int last = words.length - 3;        
         for (int i = 0; i <= last; i++) {
@@ -74,8 +78,8 @@ public class ProcessText {
             } else {
                 trigrams.put(key, trigram);
             }
-        }
-        
+        }       
+        logger.info("Generating Trigrams COMPLETED ");
         return trigrams;
     }
     

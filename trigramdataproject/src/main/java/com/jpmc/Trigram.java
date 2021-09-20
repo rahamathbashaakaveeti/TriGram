@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.jpmc.constants.Errors;
+import com.jpmc.exception.ApplicationException;
+
 public class Trigram {
 	private String key;
 	private List<String> values;
@@ -11,6 +14,11 @@ public class Trigram {
 	private static final String NO_ALPHANUM = "[^a-z0-9]";
     	
 	public Trigram(String[] threewords) {
+		
+		if(threewords.length < 3) {
+			throw new ApplicationException(Errors.INVALID_NUMBER_OF_WORDS.getCode(),Errors.INVALID_NUMBER_OF_WORDS.getMessage());
+		}
+				
 		this.key = threewords[0].toLowerCase().replaceAll(NO_ALPHANUM, "") + " "+threewords[1].toLowerCase().replaceAll(NO_ALPHANUM, "");
 		this.values = new ArrayList<String>();
 		this.values.add(threewords[2].toLowerCase().replaceAll(NO_ALPHANUM, ""));
