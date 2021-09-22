@@ -9,8 +9,10 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.jpmc.ProcessText;
-import com.jpmc.Trigram;
+/*
+ * @author Rahamath Basha Akaveeti
+ * @Created 21/09/21
+ */
 
 public class ProcessTextTest {
 

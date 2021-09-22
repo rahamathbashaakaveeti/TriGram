@@ -3,8 +3,10 @@ package com.jpmc;
 import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
 
-import com.jpmc.Trigram;
-
+/*
+ * @author Rahamath Basha Akaveeti
+ * @Created 21/09/21
+ */
 class TrigramTest {
 
 	@Test

@@ -2,6 +2,11 @@ package com.jpmc.exception;
 
 import com.jpmc.constants.Errors;
 
+/*
+ * @author Rahamath Basha Akaveeti
+ * @Created 21/09/21
+ */
+
 public class ApplicationException extends RuntimeException{
 
     private String errorCode;

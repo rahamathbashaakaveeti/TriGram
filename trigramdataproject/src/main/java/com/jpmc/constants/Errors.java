@@ -1,5 +1,10 @@
 package com.jpmc.constants;
 
+/*
+ * @author Rahamath Basha Akaveeti
+ * @Created 21/09/21
+ */
+
 public enum Errors {
 
     INVALID_NUMBER_OF_WORDS("INVALID_NUMBER_OF_WORDS", "Invalid Number of words");

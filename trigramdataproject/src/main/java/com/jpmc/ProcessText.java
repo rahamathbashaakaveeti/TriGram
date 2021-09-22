@@ -9,6 +9,11 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/*
+ * @author Rahamath Basha Akaveeti
+ * @Created 21/09/21
+ */
+
 public class ProcessText {
     
     private Map<String,Trigram> trigrams;
