@@ -1,3 +1,9 @@
+
+Problem Statement:
+Trigram Analysis:
+
+http://codekata.com/kata/kata14-tom-swift-under-the-milkwood/
+
 generateText() 
 	Generates the text from values from key-value pairs of trigram text
 	
